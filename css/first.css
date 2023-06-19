@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  user-select: none;
+}
+:root {
+ --primary: #1dcf9f;
+}
+
+.page1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1dcf9f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    font-family: roboto;
+    font-weight: bolder;
+    color: rgb(5, 5, 91);
+    cursor: none;
+    filter: grayscale(100px);
+  }
+
+  .page.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .page .opay-logo {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+    width: 100px;
+  }
+ .page .license  {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 14px;
+
+ }
+ .page .logo {
+  width: 30px;
+  padding: 5px;
+ }
