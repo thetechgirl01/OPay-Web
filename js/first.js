@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function(event) {
     setTimeout(function() {
       var page1 = document.querySelector(".page1");
@@ -5,5 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       page1.classList.add("hidden");
       page2.classList.remove("hidden");
-    }, 2000);
+    }, 10000);
   });
+  */

@@ -13,6 +13,7 @@
   
 }
 .dashboard {
+  
   display: flex;
 }
 
@@ -27,7 +28,7 @@
   box-shadow: var(--shadow);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .sidebar {
     all: unset;
     position: fixed;
@@ -42,6 +43,31 @@
   box-shadow: var(--shadow);
   }
 }
+@media (max-width: 500px) {
+  .sidebar {
+    position: fixed;
+    width: 100vw;
+    height: 7rem;
+  }
+
+  li img {
+    border-radius: 50%;
+    width: 10px;
+    align-self: center;
+  }
+  li img span {
+    padding: 0;
+    font-size: 7px;
+    align-self: center;
+  }
+  
+    li {
+    
+      align-self: center;
+      padding: 0 ;
+      cursor: pointer;
+    }
+  }
 ul {
 
   list-style-type: none;
@@ -98,10 +124,19 @@ li span {
   flex: 1;
   padding: 0 200px;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+  .dashboard {
+    width: 100vw;
+  }
   .content {
     padding: 0;
     margin: 10px;
+    width: 80vw;
+  }
+}
+@media (max-width: 500px) {
+  .content  {
+    margin: 0;
   }
 }
 
@@ -109,14 +144,29 @@ li span {
 .content .ad-section
  {
   margin: 2px;
+  border: 2px #000 solid;
 
+}
+@media (max-width: 500px) {
+  .content .welcome-user,
+  .content .ad-section {
+   width: 40vw;
+
+  }
 }
 .content .welcome-user img,
 .content .ad-section img
 {
+
   border-radius: 100px;
   height: 50px;
   width: 50px;
+}
+@media (max-width: 500px)  {
+  .content .ad-section img {
+    height: 20px;
+    width: 20px;
+  }
 }
 .content .ad-section img {
   border-radius: 100px;
@@ -126,18 +176,26 @@ li span {
 
 
 }
+@media (max-width: 500px)  {
+  .content .ad-section img {
+    height: 25px;
+    width: 25px;
+  }
+}
 .content .welcome-user .user-dp-name,
 .content .ad-section .ad-logo-title
 {
-  display: flex;
+ display: inline-flex;
+
 
 }
 
 .content .welcome-user .user-name,
 .content .ad-section .ad-title
-{
-   display: flex;
-   flex-direction: column;
+{ 
+  display: flex; 
+  flex-direction: column;
+  width: 60vw;
 }
 .content .welcome-user .user-name span,
 .content .ad-section .ad-title span
@@ -145,6 +203,12 @@ li span {
    font-size: 1rem;
    font-weight: bolder;
    padding-top: 10px;
+  }
+@media (max-width: 500px) {
+  .content .welcome-user .user-name span,
+.content .ad-section .ad-title span {
+  font-size: 10px;
+}
 }
 .content .ad-section .ad-title span {
   color: var(--text);
@@ -162,14 +226,15 @@ li span {
 }
 @media (max-width: 900px) {
   .account-details {
-    width: 95vw;
+    width: 90vw;
     
   }
 }
-@media (max-width: 50px) {
+@media (max-width: 500px) {
   .account-details {
-    width: 60vw;
-    height: 100px
+    width: 50vw;
+    height: 150px;
+    border-radius: 20px;
     
   }
 }
@@ -187,7 +252,19 @@ li span {
   font-size: 2rem;
   font-weight: 600;
 }
-
+@media (max-width: 500px) {
+  .account-details .details {
+    padding: 10px 10px 10px 20px;
+  }
+  .account-details .details span {
+    font-size: 6px;
+  }
+  .account-details .amount {
+    padding: 10px 10px 10px 20px;
+    font-size: 1rem;
+    
+  }
+}
 .actions {
   margin: 15px ;
   padding: 15px;
@@ -198,7 +275,14 @@ li span {
   color: #fff;
   font-size: 1rem;
 }
-
+@media (max-width: 500px)  {
+  .actions {
+    margin: 20px 0 30px 0;
+    padding: 2px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
 .actions .actions-add-monebby,
 .actions .actions-transfer,
 .actions .actions-withdraw,
@@ -237,12 +321,23 @@ li span {
     font-size: 1rem;
   }
 }
+@media (max-width: 500px) {
+  .actions .sign {
+    width: 25px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .actions .text {
+    margin-top: 5px;
+    font-size: 8px;
+  }
+}
 .content .ad-section {
   padding-right: 20px;
   margin: 7px;
   border-radius: 10px;
   height: 70px;
-  display:  inline-flex;
   box-shadow: var(--shadow);  
 }
 @media (min-width: 1000px){
@@ -255,6 +350,19 @@ li span {
    .content .ad-section {
     width: 88vw;
   }
+}
+@media (max-width: 500px) {
+  .content .ad-section {
+   width: 40vw;
+   height: 50px;
+
+  }
+  .content .ad-section  .cancel {
+    font: 10px monospace;
+    padding-left: 40px;
+    padding-top: 5px;
+  }
+
 }
 .content .ad-section  .cancel {
   font: 1rem monospace;
@@ -269,11 +377,14 @@ li span {
   padding-left: 600px;
 }
 }
+.content .options .option {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 10px 10px 10px;
+  margin: 0 4px 30px 4px;
+}
 .content .options h2 {
   font: 1rem arial bold;
-
-}
-.content .options .option {
 
 }
 .content .options .option .sign {
@@ -288,5 +399,24 @@ li span {
 .content .options .option .text{
   color: green;
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin: 0px;
+}
+@media (max-width: 500px) {
+  .content .options .option {
+    width: 50vw;
+    height: 70px;
+  }
+  .content .options .option .sign {
+    width: 25px;
+    height: 25px;
+
+  }
+  .content .options .option .text {
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (min-width: 500px) {
+
 }
